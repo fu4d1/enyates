@@ -2,7 +2,7 @@
   $menu = [
     'head' => [2=>'Data Kita', 3=>'Tugas Bulanan'],
     2      => ['rekap'=>'fas fa-fw fa-chart-bar','keuangan'=>'fas fa-fw fa-comment-dollar','kegiatan'=>'fas  fa-fw fa-hiking'],
-    3      => ['pemuktahiran'=>'fas fa-fw fa-recycle','fds'=>'far fa-fw fa-calendar-check','verifikasi'=>'fas fa-fw fa-graduation-cap']
+    3      => ['pemuktahiran'=>'fas fa-fw fa-recycle','FDS'=>'far fa-fw fa-calendar-check','verifikasi'=>'fas fa-fw fa-graduation-cap']
   ];
 ?>
 <!DOCTYPE html>
@@ -26,10 +26,21 @@
   <link href="<?=base_url()?>vendor/sbadmin2/css/sb-admin-2.min.css" rel="stylesheet">
   <link rel="icon" href="<?=base_url()?>vendor/img/pkh.png">
   <style>
-    .nav-link:hover{
-      background-color: grey;
+    #accordionSidebar > .nav-item > .nav-link:hover{
+      background-color: darkgreen;
       font-weight: bolder;
-      box-shadow: 0px 5px 2px grey;
+    }
+
+    #accordionSidebar > .nav-item > .aktif{
+      background-color: darkgreen;
+      font-weight: bolder;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar.toggled .nav-item .nav-link span {
+        font-size: .78rem;
+        display: block;
+      }
     }
   </style>
 
@@ -44,8 +55,9 @@
     <ul class="navbar-nav bg-gradient-success shadow sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center pr-2" href="index.html">
         <div class="sidebar-brand-icon text-primary">
+          <!-- <img class="img img-fluid" src="<?=base_url()?>vendor/img/pkh.png" style="width: 75px"> -->
           <i class="fas fa-people-carry"></i>
         </div>
         <div class="sidebar-brand-text mx-3 text-white">eNyates<sup>.com</sup></div>
@@ -55,9 +67,9 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+        <li class="nav-item">
+          <a class="nav-link aktif" href="index.html">
+            <i class="fas fa-fw fa-tachometer-alt aktif"></i>
             <span>Dashboard</span></a>
         </li>
 
@@ -69,8 +81,8 @@
           <?php foreach ($menu[$key] as $val => $icon): ?>
           <li class="nav-item">
             <a class="nav-link py-2 " href="<?= base_url().$val ?>">
-              <i class="text-primary <?= $icon ?>"></i>
-              <span class="text-capitalize text-white"><?= $val ?></span></a>
+              <i class="text-white <?= $icon ?>"></i>
+              <span class="menu text-capitalize text-white"><?= $val ?></span></a>
           </li>
         <?php endforeach ?>
       <?php endforeach ?>
@@ -280,6 +292,7 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+          <p>content</p>
 
         </div>
         <!-- /.container-fluid -->
