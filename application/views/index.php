@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
   $menu = [
     'head' => [2=>'Catatan Kita', 3=>'Tugas Rutin'],
-    2      => ['rekap'=>'fas fa-fw fa-chart-bar','keuangan'=>'fas fa-fw fa-wallet','kegiatan'=>'fas  fa-fw fa-hiking'],
+    2      => ['analisa'=>'fas fa-glasses','rekap'=>'fas fa-fw fa-chart-bar','keuangan'=>'fas fa-fw fa-wallet','kegiatan'=>'fas  fa-fw fa-hiking'],
     3      => ['perubahan data'=>'fas fa-fw fa-recycle','pertemuan'=>'far fa-fw fa-calendar-check','cek-ricek'=>'fas fa-fw fa-check-double']
   ];
 ?>
@@ -118,7 +118,7 @@
         <div class="container-fluid">
 
           <div class="mt-2 mb-4">
-            <a class="breadcrumb-item btn-link" href="<?=base_url()?>"><i class="fas fa-home"></i></a>
+            <a class="breadcrumb-item" href="<?=base_url()?>"><i class="fas fa-home text-success"></i></a>
             <a class="breadcrumb-item">Rekap</a>
             <a class="breadcrumb-item">Rekap</a>
             <a href="#" class="float-right"><i class="fas fa-sign-out-alt fa-lg"></i></a>
@@ -213,7 +213,7 @@
           <div class="row">
 
             <!-- Content Column -->
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-8 mb-4">
 
               <!-- Project Card Example -->
               <div class="card shadow mb-4">
@@ -298,16 +298,16 @@
 
             </div>
 
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-4 mb-4">
 
               <!-- Illustrations -->
               <div class="card shadow mb-4">
-                <div class="card-header py-3">
+                <div class="card-header py-3" id="mdl2">
                   <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
                 </div>
                 <div class="card-body">
                   <div class="text-center">
-                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="#" alt="">
                   </div>
                   <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that you can use completely free and without attribution!</p>
                   <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw →</a>
@@ -316,10 +316,19 @@
 
               <!-- Approach -->
               <div class="card shadow mb-4">
-                <div class="card-header py-3">
+                <div class="card-header py-3" id="mdl">
                   <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
                 </div>
                 <div class="card-body">
+                  <div>
+                    <form>
+                      <div class="form-group">
+                        <input class="form-control" id="kotak" type="text" value="">
+                      </div>
+                    </form>
+                    <a href="#" class="btn btn-block btn-primary" id="modal" data-toggle="modal" data-target="#logoutModal">Simpan</a>
+                  </div>
+                  <p id="isi"></p>
                   <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
                   <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
                 </div>
@@ -342,63 +351,6 @@
                     <tr><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Position</th><th rowspan="1" colspan="1">Office</th><th rowspan="1" colspan="1">Age</th><th rowspan="1" colspan="1">Start date</th><th rowspan="1" colspan="1">Salary</th></tr>
                   </tfoot>
                   <tbody>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                   <tr role="row" class="odd">
                       <td class="sorting_1">Airi Satou</td>
                       <td>Accountant</td>
@@ -512,7 +464,7 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body bg-secondary text-white">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
           <a class="btn btn-primary" href="login.html">Logout</a>
@@ -520,6 +472,22 @@
       </div>
     </div>
   </div>
+
+  <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+  <div class="toast" style="position: absolute; top: 0; right: 0;">
+    <div class="toast-header">
+      <img src="..." class="rounded mr-2" alt="...">
+      <strong class="mr-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
 
   <!-- Bootstrap core JavaScript-->
   <script src="<?=base_url()?>vendor/sbadmin2/vendor/jquery/jquery.min.js"></script>
@@ -531,7 +499,35 @@
   <!-- Custom scripts for all pages-->
   <script src="<?=base_url()?>vendor/sbadmin2/js/sb-admin-2.min.js"></script>
   <script>
-    $("#tahun").text( (new Date).getFullYear() );
+    $(document).ready(function(){
+      $("#tahun").text( (new Date).getFullYear() );
+      
+      $('#mdl, #mdl2').click(function(){
+        let judul = $(this).text()
+        $('#logoutModal').modal('show');
+        $('.modal-title').text(judul)
+      })
+
+      $('#kotak').on('keyup',function(){
+        let tulisan = $('#kotak').val();
+         $.ajax({
+          url:'<?=base_url()?>welcome/ajax',
+          type:'post',
+          data:{text:tulisan},
+          dataType:'json',
+          success:function(hasil){
+            if (hasil.length >10){
+              $('#kotak').addClass('is-invalid');
+            }else{
+              $('#kotak').removeClass('is-invalid');
+              $('#kotak').addClass('is-valid');
+            }
+          }
+         })
+      })
+
+
+    })
   </script>
 
 </body>
