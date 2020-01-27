@@ -5,6 +5,8 @@
     3      => ['perubahan data'=>'fas fa-fw fa-recycle','pertemuan'=>'far fa-fw fa-calendar-check','cek-ricek'=>'fas fa-fw fa-check-double']
   ];
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,42 +20,14 @@
 
   <title>eNyates</title>
 
-  <!-- Custom fonts for this template-->
-  <link href="<?=base_url()?>vendor/sbadmin2/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom fonts awesowm for this template-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="<?=base_url()?>vendor/sbadmin2/css/sb-admin-2.min.css" rel="stylesheet">
-  <link rel="icon" href="<?=base_url()?>vendor/img/pkh.png">
-  <style>
-    #accordionSidebar > .nav-item > .nav-link:hover{
-      background-color: darkgreen;
-      font-weight: bolder;
-    }
-
-    #accordionSidebar > .nav-item > .aktif{
-      background-color: darkgreen;
-      font-weight: bolder;
-    }
-
-    footer.sticky-footer{
-      padding: 0;
-      padding-bottom: 17px;
-      padding-right: 20px;
-      font-weight: bolder;
-    }
-
-    @media (min-width: 768px) {
-      .sidebar.toggled .nav-item .nav-link span {
-        font-size: .78rem;
-        display: block;
-      }
-    }
-    .scroll-to-top{
-      background: rgba(29, 191, 79, 0.6);
-    }
-  </style>
-
+  <link href="<?=base_url()?>assets/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/css/cssq.css" rel="stylesheet">
+  <link rel="icon" href="<?=base_url()?>assets/img/pkh.png">
 </head>
 
 <body id="page-top">
@@ -472,64 +446,18 @@
       </div>
     </div>
   </div>
-
-  <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
-  <div class="toast" style="position: absolute; top: 0; right: 0;">
-    <div class="toast-header">
-      <img src="..." class="rounded mr-2" alt="...">
-      <strong class="mr-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
-      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
-    </div>
-  </div>
 </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="<?=base_url()?>vendor/sbadmin2/vendor/jquery/jquery.min.js"></script>
-  <script src="<?=base_url()?>vendor/sbadmin2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?=base_url()?>assets/js/jquery.min.js"></script>
+  <script src="<?=base_url()?>assets/js/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="<?=base_url()?>vendor/sbadmin2/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<?=base_url()?>assets/js/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="<?=base_url()?>vendor/sbadmin2/js/sb-admin-2.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $("#tahun").text( (new Date).getFullYear() );
-      
-      $('#mdl, #mdl2').click(function(){
-        let judul = $(this).text()
-        $('#logoutModal').modal('show');
-        $('.modal-title').text(judul)
-      })
-
-      $('#kotak').on('keyup',function(){
-        let tulisan = $('#kotak').val();
-         $.ajax({
-          url:'<?=base_url()?>welcome/ajax',
-          type:'post',
-          data:{text:tulisan},
-          dataType:'json',
-          success:function(hasil){
-            if (hasil.length >10){
-              $('#kotak').addClass('is-invalid');
-            }else{
-              $('#kotak').removeClass('is-invalid');
-              $('#kotak').addClass('is-valid');
-            }
-          }
-         })
-      })
-
-
-    })
-  </script>
-
+  <script src="<?=base_url()?>assets/js/sb-admin-2.min.js"></script>
+  <script src="<?=base_url()?>assets/js/jsq.js"></script>
 </body>
 
 </html>

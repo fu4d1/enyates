@@ -1,0 +1,27 @@
+
+#accordionSidebar > .nav-item > .nav-link:hover{
+  background-color: darkgreen;
+  font-weight: bolder;
+}
+
+#accordionSidebar > .nav-item > .aktif{
+  background-color: darkgreen;
+  font-weight: bolder;
+}
+
+footer.sticky-footer{
+  padding: 0;
+  padding-bottom: 17px;
+  padding-right: 20px;
+  font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+  .sidebar.toggled .nav-item .nav-link span {
+    font-size: .78rem;
+    display: block;
+  }
+}
+.scroll-to-top{
+  background: rgba(29, 191, 79, 0.6);
+}
