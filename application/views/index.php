@@ -95,7 +95,7 @@
             <a class="breadcrumb-item" href="<?=base_url()?>"><i class="fas fa-home text-success"></i></a>
             <a class="breadcrumb-item">Rekap</a>
             <a class="breadcrumb-item">Rekap</a>
-            <a href="#" class="float-right"><i class="fas fa-sign-out-alt fa-lg"></i></a>
+            <a href="#" class="float-right" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-sign-out-alt fa-lg"></i></a>
           </div>
 
 
@@ -449,14 +449,19 @@
 </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="<?=base_url()?>assets/js/jquery.min.js"></script>
-  <script src="<?=base_url()?>assets/js/js/bootstrap.bundle.min.js"></script>
+  <script src="<?=base_url()?>assets/js/jquery.js"></script>
+  <script src="<?=base_url()?>assets/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
   <script src="<?=base_url()?>assets/js/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="<?=base_url()?>assets/js/sb-admin-2.min.js"></script>
+  
+  <script type="text/javascript">
+    var baseURL = "<?php echo base_url(); ?>";
+  </script>
+  
   <script src="<?=base_url()?>assets/js/jsq.js"></script>
 </body>
 

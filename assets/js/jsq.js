@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   $("#tahun").text( (new Date).getFullYear() );
   
@@ -11,7 +10,7 @@ $(document).ready(function(){
   $('#kotak').on('keyup',function(){
     let tulisan = $('#kotak').val();
      $.ajax({
-      url:'<?=base_url()?>welcome/ajax',
+      url:baseURL+'welcome/ajax',
       type:'post',
       data:{text:tulisan},
       dataType:'json',
