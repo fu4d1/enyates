@@ -40,7 +40,7 @@
           <p class="tag text-success text-dark">Coordination <i class="fas text-success fa-hands-helping"></i> Administration</p>
         </div>
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card o-hidden border-0 shadow-lg my-2">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
@@ -50,11 +50,11 @@
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
                   <form class="">
-                    <small  class="text-muted">User Account</small >
+                    <small  class="text-muted">User account</small >
                     <div class="form-group">
                       <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                     </div>
-                    <small  class="text-muted">Password</small >
+                    <small  class="text-muted">Password</small ><a class="float-right pt-1" href="forgot-password.html" style="font-size: 11px">Forgot Password?</a>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                     </div>
@@ -62,14 +62,12 @@
                       Login
                     </a> -->
                   </form>
-                 <!--  <hr>
+                  <hr>
                   <div class="text-center">
-                    <a class="small" href="forgot-password.html">Forgot Password?</a>
-                  </div> -->
+                    
+                  </div>
                 </div>
-                <div class="bg-success shadow shadow-sm text-center text-light" style="height: 56px; cursor: pointer; line-height: 56px; font-size: 20px">
-                  Login
-                </div>
+                <a type="submit" class="bg-success shadow shadow-sm text-center text-light" style="display: block; height: 56px; cursor: pointer; line-height: 56px; font-size: 20px; width: 100%">Let's go..</a>
               </div>
             </div>
           </div>
