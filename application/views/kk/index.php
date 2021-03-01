@@ -64,12 +64,19 @@
                 <td>Jacob</td>
                 <td>Thornton</td>
                 <td>@fat</td>
+                <td>
+                  <a href="#">edit</a>
+                </td>
+                
               </tr>
               <tr>
                 <th scope="row">3</th>
                 <td>Larry</td>
                 <td>the Bird</td>
                 <td>@twitter</td>
+                <td>
+                  <a href="#">edit</a>
+                </td>
               </tr>
             </tbody>
           </table>

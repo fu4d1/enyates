@@ -37,7 +37,7 @@
           <form>
             <div class="form-group">
                 <label for="nomorpkh">Nomor PKH</label>
-                <input type="text" class="form-control" name="nomorpkh" placeholder="Nomor PKH">
+                <input type="text" class="form-control" name="nomorpkh" placeholder="Nomor PKH" data-mask="00 00 0000">
             </div>
             <div class="form-group">
                 <label for="nomoratm">Nomor ATM</label>
@@ -49,7 +49,7 @@
             </div>
             <div class="form-group">
                 <label for="namapengurus">NO KK</label>
-                <input type="text" class="form-control" name="namapengurus" placeholder="Nama Pengurus">
+                <input type="text" class="form-control" name="namapengurus" placeholder="Nama Pengurus" data-mask="000000 000000 0000">
             </div>
             <div class="form-group">
                 <label for="namapengurus">NIK</label>
@@ -94,5 +94,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="<?php base_url()?>/enyates/assets/js/jquery.mask.js"></script>
   </body>
 </html>
