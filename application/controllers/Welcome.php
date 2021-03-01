@@ -8,6 +8,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('index');
 	}
 
+	public function aa()
+	{
+		echo "Hello aa";
+	}
+
 	public function ajax()
 	{
 
