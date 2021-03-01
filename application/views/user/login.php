@@ -47,7 +47,7 @@
               <div class="col">
                 <div class="px-4 py-4 pb-0">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!!</h1>
                   </div>
                   <form class="">
                     <small  class="text-muted">User account</small >
