@@ -18,6 +18,14 @@ class Kk extends CI_Controller {
 		$this->load->view('kk/tambah',$data);
 	}
 
+	public function simpanPengurus()
+	{
+		$daput = $this->input->post();
+		$this->db->where('id_pengurus',$daput['id_pengurus']);
+		$this->db->update('pengurus',$daput);
+		return true;
+	}
+
 	public function ubahArt($id_art=null,$id_pengurus)
 	{
 		$data['id_pengurus'] = $id_pengurus;

@@ -29,7 +29,6 @@
       <div class="row">
         <div class="col-xl-10 mt-3 mb-5">
           Ubah Anggota Rumah Tangga
-          <a href="<?= base_url('kk/tambah/').$id_pengurus?>" class="btn btn-info float-right">kembali</a>
         </div>
       </div>
 
@@ -59,7 +58,9 @@
                 <input type="text" name="id_art" value="<?=$art['id_art']?>" hidden>
                 <input type="text" value="<?=$id_pengurus?>" hidden>
 
-                <button class="btn btn-primary" type="submit">simpan</button>
+                <button class="btn btn-primary float-right" type="submit">simpan</button>
+                <a href="<?=base_url('kk/hapusArt').'/'.$art['id_art'].'/'.$id_pengurus?>" onclick="return confirm('Yakin mau menghapus <?= $art['nama_art']?>?')" class="btn btn-danger">Hapus</a>
+                <a href="<?= base_url('kk/tambah/').$id_pengurus?>" class="btn btn-info">kembali</a>
             </form>
         </div>
       </div>
