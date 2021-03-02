@@ -143,6 +143,7 @@
             data:{pengurus:pengurus,no_pes:nomorpkh,no_atm:nomoratm,nok:nokk,nik:nik,dusun:dusun,ibu_kandung:ibu_kandung,catatan:catatan,id_pengurus:id_pengurus},
             success:function(data){
               console.log(data);
+              alert('Data berhasil disimpan');
             }
 
           })
