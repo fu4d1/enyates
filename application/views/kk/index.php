@@ -44,40 +44,21 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nama</th>
+                <th scope="col">N I K</th>
+                <th scope="col">NO KK</th>
                 <th scope="col">Dusun</th>
-                <th scope="col">Keterangan</th>
-                <th scope="col">aksi</th>
               </tr>
             </thead>
             <tbody>
+              <?php $no=1; foreach ($pengurus as $value) : ?> 
               <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>
-                  <a href="#">edit</a>
-                </td>
+                <th scope="row"><?= $no++?></th>
+                <td><a href="<?= base_url("kk/tambah").'/'.$value['id_pengurus']?>"><?=$value['pengurus']?></a></td>
+                <td><?=$value['nik']?></td>
+                <td><?=$value['nok']?></td>
+                <td><?=$value['dusun']?></td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>
-                  <a href="#">edit</a>
-                </td>
-                
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>
-                  <a href="#">edit</a>
-                </td>
-              </tr>
+              <?php endforeach ?>
             </tbody>
           </table>
         </div>

@@ -32,58 +32,75 @@
           <a href="<?= base_url('kk')?>" class="btn btn-info float-right">kembali</a>
         </div>
       </div>
+
+      <?php
+      var_dump($art);
+      ?>
       <div class="row">
         <div class="col-xl-10">
           <form>
             <div class="form-group">
                 <label for="nomorpkh">Nomor PKH</label>
-                <input type="text" class="form-control" name="nomorpkh" placeholder="Nomor PKH" data-mask="00 00 0000">
+                <input type="text" class="form-control" name="nomorpkh" placeholder="Nomor PKH" value="<?= $pengurus['no_pes'] ?>">
             </div>
             <div class="form-group">
                 <label for="nomoratm">Nomor ATM</label>
-                <input type="text" class="form-control" name="nomoratm" placeholder="Nomor ATM">
+                <input type="text" class="form-control" name="nomoratm" value="<?= $pengurus['no_atm'] ?>" placeholder="Nomor ATM">
             </div>
             <div class="form-group">
                 <label for="namapengurus">Nama Pengurus</label>
-                <input type="text" class="form-control" name="namapengurus" placeholder="Nama Pengurus">
+                <input type="text" class="form-control" name="namapengurus" value="<?= $pengurus['pengurus'] ?>" placeholder="Nama Pengurus">
             </div>
             <div class="form-group">
                 <label for="namapengurus">NO KK</label>
-                <input type="text" class="form-control" name="namapengurus" placeholder="Nama Pengurus" data-mask="000000 000000 0000">
+                <input type="text" class="form-control" name="namapengurus" placeholder="Nama Pengurus" value="<?= $pengurus['nok'] ?>" data-mask="000000 000000 0000">
             </div>
             <div class="form-group">
                 <label for="namapengurus">NIK</label>
-                <input type="text" class="form-control" name="namapengurus" placeholder="Nama Pengurus">
+                <input type="text" class="form-control" name="namapengurus" value="<?= $pengurus['nik'] ?>" placeholder="Nama Pengurus">
             </div>
             <div class="form-group">
-                <label for="nomorpkh">Dusun</label>
-                <select id="inputState" class="form-control">
-                    <option selected value="">-pilih-</option>
-                    <option value="">...</option>
-                    <option value="">...</option>
-                    <option value="">...</option>
-                </select>
+                <label for="dusun">Dusun</label>
+                <input type="text" class="form-control" name="dusun" value="<?= $pengurus['dusun'] ?>" placeholder="Nama Pengurus">
             </div>
             <div class="form-group">
-                <label for="nomorpkh">Nomor PKH</label>
-                <input type="text" class="form-control" name="nomorpkh" placeholder="Nomor PKH">
+                <label for="ibu_kandung">Ibu Kandung <?=$pengurus['pengurus']?></label>
+                <input type="text" class="form-control" name="ibu_kandung" value="<?= $pengurus['ibu_kandung'] ?>" placeholder="Ibu Kandung">
+            </div>
+            <div class="form-group">
+                <label for="catatan">Catatan</label>
+                <textarea class="form-control" id="catatan" rows="3"></textarea>
             </div>
 
-            <div class="form-group">
-                <label for="exampleFormControlSelect2">Example multiple select</label>
-                <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
             </form>
+        </div>
+      </div>
+      
+      <div class="row mt-4">
+        <div class="col-xl-10">
+        <h5>Anggota Rumah Tangga</h5>
+          <table id="data" class="table table-sm table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nama Art</th>
+                <th scope="col">N I K</th>
+                <th scope="col">Ibu Kandung</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php $no=1; foreach ($art as $value) : ?> 
+              <tr>
+                <th scope="row"><?= $no++?></th>
+                <td><?=$value['nama_art']?></td>
+                <td><?=$value['nik']?></td>
+                <td><?=$value['ibu_kandung']?></td>
+                <td></td>
+              </tr>
+              <?php endforeach ?>
+            </tbody>
+          </table>
         </div>
       </div>
 

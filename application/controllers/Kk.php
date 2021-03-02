@@ -5,12 +5,17 @@ class Kk extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('kk/index');
+		$data['judul'] = 'Validasi NIK';
+		$data['pengurus'] = $this->db->get('pengurus')->result_array();
+		$this->load->view('kk/index',$data);
 	}
 
-    public function tambah()
+    public function tambah($id_pengurus)
 	{
-		$this->load->view('kk/tambah');
+		$data['judul'] = 'Validasi NIK';
+		$data['pengurus'] = $this->db->get_where('pengurus',['id_pengurus'=>$id_pengurus])->row_array();
+		$data['art'] = $this->db->get_where('art',['nopes_id'=>$data['pengurus']['no_pes'] ])->result_array();
+		$this->load->view('kk/tambah',$data);
 	}
 
 
