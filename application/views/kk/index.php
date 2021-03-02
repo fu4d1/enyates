@@ -34,7 +34,7 @@
       <div class="row">
         <div class="col-xl-10 mt-3 mb-5">
           Daftar Data
-          <a href="<?= base_url('kk/tambah')?>" class="btn btn-primary float-right">tambah data</a>
+          <a href="#" class="btn btn-primary float-right">tambah data</a>
         </div>
       </div>
       <div class="row">

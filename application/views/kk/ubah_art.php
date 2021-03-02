@@ -29,34 +29,35 @@
       <div class="row">
         <div class="col-xl-10 mt-3 mb-5">
           Ubah Anggota Rumah Tangga
-          <a href="<?= base_url('kk')?>" class="btn btn-info float-right">kembali</a>
+          <a href="<?= base_url('kk/tambah/').$id_pengurus?>" class="btn btn-info float-right">kembali</a>
         </div>
       </div>
 
       <div class="row">
         <div class="col-xl-10">
-            <form action="<?=base_url()?>kk/simpanArt" method="post">
+            <form action="<?=base_url()?>kk/simpanArt/<?=$id_pengurus?>" method="post">
                 <div class="form-group">
                     <label for="nama_art">Nama ART Asal</label>
-                    <input type="text" class="form-control" name="nama_art" placeholder="Nama ART" value="<?= $art['nama_art'] ?>" readonly>
+                    <input type="text" class="form-control" name="nama_art" value="<?= strtoupper($art['nama_art']) ?>" readonly>
                 </div>
 
                 <div class="form-group">
                     <label for="nama_art">Nama ART sesuai KK</label>
-                    <input type="text" class="form-control" name="nama_kk" placeholder="Nama ART sesuai KK" value="<?= $art['nama_kk'] ?>">
+                    <input type="text" class="form-control" name="nama_kk" value="<?= strtoupper($art['nama_kk']) ?>">
                 </div>
 
                 <div class="form-group">
                     <label for="nik_art">Nomor N I K</label>
-                    <input type="text" class="form-control" name="nik" placeholder="Nama ART sesuai KK" value="<?= $art['nik'] ?>">
+                    <input type="number" class="form-control" name="nik" value="<?= $art['nik'] ?>" data-mask="0000000000000000">
                 </div>
 
                 <div class="form-group">
                     <label for="ibu_kandung">Ibu Kandung</label>
-                    <input type="text" class="form-control" name="ibu_kandung" placeholder="Nama Ibu Kandung" value="<?= $art['ibu_kandung'] ?>">
+                    <input type="text" class="form-control" name="ibu_kandung" value="<?= strtoupper($art['ibu_kandung']) ?>">
                 </div>
 
                 <input type="text" name="id_art" value="<?=$art['id_art']?>" hidden>
+                <input type="text" value="<?=$id_pengurus?>" hidden>
 
                 <button class="btn btn-primary" type="submit">simpan</button>
             </form>
