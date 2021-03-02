@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xl-10">
+        <div class="col-xl-10 table-responsive-md">
           <table id="data" class="table table-sm table-striped">
             <thead>
               <tr>

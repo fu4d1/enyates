@@ -33,9 +33,6 @@
         </div>
       </div>
 
-      <?php
-      var_dump($art);
-      ?>
       <div class="row">
         <div class="col-xl-10">
           <form>
@@ -77,7 +74,7 @@
       </div>
       
       <div class="row mt-4">
-        <div class="col-xl-10">
+        <div class="col-xl-10 table-responsive-md">
         <h5>Anggota Rumah Tangga</h5>
           <table id="data" class="table table-sm table-striped">
             <thead>
@@ -93,7 +90,11 @@
               <?php $no=1; foreach ($art as $value) : ?> 
               <tr>
                 <th scope="row"><?= $no++?></th>
-                <td><?=$value['nama_art']?></td>
+                <td>
+                  <a href="<?=base_url('kk/ubahArt').'/'.$value['id_art']?>">  
+                    <?=$value['nama_art']?>
+                  </a>
+                </td>
                 <td><?=$value['nik']?></td>
                 <td><?=$value['ibu_kandung']?></td>
                 <td></td>

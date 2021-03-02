@@ -18,5 +18,20 @@ class Kk extends CI_Controller {
 		$this->load->view('kk/tambah',$data);
 	}
 
+	public function ubahArt($id_art)
+	{
+		$data['art'] = $this->db->get_where('art',['id_art'=>$id_art])->row_array();
+		$this->load->view('kk/ubah_art',$data);
+	}
+
+	public function simpanArt()
+	{
+		$daput = $this->input->post();
+		var_dump($daput);
+		die();
+		$data['art'] = $this->db->get_where('art',['id_art'=>$id_art])->row_array();
+		$this->load->view('kk/ubah_art',$data);
+	}
+
 
 }
