@@ -59,7 +59,7 @@
                 <input type="text" value="<?=$id_pengurus?>" hidden>
 
                 <button class="btn btn-primary float-right" type="submit">simpan</button>
-                <a href="<?=base_url('kk/hapusArt').'/'.$art['id_art'].'/'.$id_pengurus?>" onclick="return confirm('Yakin mau menghapus <?= $art['nama_art']?>?')" class="btn btn-danger">Hapus</a>
+                <a href="<?=base_url('kk/hapusArt').'/'.$art['id_art'].'/'.$id_pengurus?>" onclick="return confirm('Yakin mau menghapus <?= $art['nama_art']?>?')" class="btn btn-danger">Hapus <?=strtoupper($art['nama_art'])?></a>
                 <a href="<?= base_url('kk/tambah/').$id_pengurus?>" class="btn btn-info">kembali</a>
             </form>
         </div>

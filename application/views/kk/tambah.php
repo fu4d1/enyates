@@ -61,7 +61,7 @@
             </div>
             <div class="form-group">
                 <label for="ibu_kandung">Ibu Kandung <span class="badge badge-success"><?=$pengurus['pengurus']?></span></label>
-                <input type="text" class="form-control"  id="ibu_kandung" name="ibu_kandung" value="<?= $pengurus['ibu_kandung'] ?>">
+                <input type="text" class="form-control is-valid"  id="ibu_kandung" name="ibu_kandung" value="<?= $pengurus['ibu_kandung'] ?>">
             </div>
             <div class="form-group">
                 <label for="catatan">Catatan</label>
@@ -125,6 +125,19 @@
     <script src="https://cdn.rawgit.com/igorescobar/jQuery-Mask-Plugin/master/dist/jquery.mask.js"></script>
     <script>
       $(document).ready(function(){
+        
+        $(".form-control").change(function(){
+          if($(this).val()!=''){
+            $(this).addClass("is-valid")
+          }
+        });
+
+        $(".form-control").each(function(){
+            if($(this).val()==''){
+                $(this).addClass("is-invalid")
+            }
+        })
+
         $(document).scrollTop($(document).height());
         $('#simpan-pengurus').click(function(){
           pengurus = $("#namapengurus").val();
@@ -142,8 +155,8 @@
             url:"<?=base_url('kk/simpanPengurus')?>",
             data:{pengurus:pengurus,no_pes:nomorpkh,no_atm:nomoratm,nok:nokk,nik:nik,dusun:dusun,ibu_kandung:ibu_kandung,catatan:catatan,id_pengurus:id_pengurus},
             success:function(data){
-              console.log(data);
               alert('Data berhasil disimpan');
+              window.location.reload();
             }
 
           })
