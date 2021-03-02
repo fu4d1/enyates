@@ -133,6 +133,10 @@
         });
 
         $(".form-control").each(function(){
+            if($(this).val()==0000000000000000){
+                $(this).val('');
+            }
+
             if($(this).val()==''){
                 $(this).addClass("is-invalid")
             }
