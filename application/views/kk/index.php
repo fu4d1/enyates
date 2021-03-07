@@ -44,6 +44,7 @@
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nama</th>
+                <th scope="col">PKH</th>
                 <th scope="col">N I K</th>
                 <th scope="col">NO KK</th>
                 <th scope="col">Dusun</th>
@@ -54,6 +55,7 @@
               <tr>
                 <th scope="row"><?= $no++?></th>
                 <td><a href="<?= base_url("kk/tambah").'/'.$value['id_pengurus']?>"><?=$value['pengurus']?></a></td>
+                <td><?=$value['no_pes']?></td>
                 <td><?=$value['nik']?></td>
                 <td><?=$value['nok']?></td>
                 <td><?=$value['dusun']?></td>
